@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LIGHTUP THE UNIVERSE GAME</title>
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <link rel="shortcut icon" type="image/x-icon" href="png/Babysun.png">
+    <meta name="description" content="LIGHTUP THE UNIVERSE GAME">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="GONZALEZ DIALLO GENEBES CHETTOUANE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- ********************* html part ********************* -->
+
+    <video class="videoclass"
+        src="https://assets.mixkit.co/videos/preview/mixkit-traveling-between-the-stars-and-nebulae-14151-large.mp4"
+        type="video/mp4" autoplay muted loop></video>
+
+    <h1>LIGHTUP THE UNIVERSE</h1>
+    <aside>By Gonzalez Diallo Genebes Chettouane </aside>
+    <aside>Sounds and music from <a href="https://www.zapsplat.com/" target="_blank">Zapsplat.com</a></aside>
+    <aside><a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/lightup.html" target="_blank">Original "Light Up" game</a></aside>
+    <hr size="2px" color="white">
+    <br>
+    <div class="popup" onmouseover="helpon()" onmouseout="helpoff()"><span class="rules" id="rules">> RULES <</span>
+        <span class="popuptext" id="rulespopup" value="0"><section class="help" id="help">
+                  <p>🌌 The universe is dark... put baby suns to light it up, but never two facing each other ! 🌌</p>
+                  <p>🌞 You can put and remove a baby sun with a left-mouse click 🌞</p>
+                  <p>🛰️ You can put and remove a mark with a right-mouse click, they are just indicators 🛰️</p>
+                  <p>🌑 Asteroids are walls with special rules : 🌑</p>
+                  <ul>
+                      <li>A group of many small asteroids represents a simple wall</li>
+                      <li>A big white asteroid must not have baby suns next to it</li>
+                      <li>Other asteroids are grouped by 1, 2, 3 or 4 and must have their exact number of baby suns next to them</li>
+                  </ul>
+                  <p>❌ An inverted baby sun or asteroid means that it has an error ❌</p>
+                  <p>🕹️ There are five options with the buttons under the grid : 🕹️</p>
+                  <ul>
+                      <li>"RESTART" to restart the current game</li>
+                      <li>"SOLVE" to show its solution</li>
+                      <li>"UNDO" to cancel your last moves</li>
+                      <li>"REDO" to redo your cancelled moves</li>
+                      <li>"NEW GAME" to create a random game with your chosen options</li>
+                  </ul>
+                  <p>💫 The wrapping option makes the game connected by its edges, you can activate it by clicking "WRAPPING" then "NEW GAME" 💫</p>
+                  <p>🔳 You can also choose to always have a square game with the "SQUARE" checkbox 🔳</p>
+                  <p>📊 Change the percentage of walls you want for your game with the drop-down list 📊</p>
+              </section></span>
+      </div>
+    <br>
+    <p class="centered"><canvas id="gamecanvas" width="0px" height="0px"></canvas></p>
+    <br>
+    <section>
+        <button class="restart" onclick="restart()" id="restartB">RESTART</button>
+        <button class="solve" onclick="solve()" id="solveB">SOLVE</button>
+        <button class="undo" onclick="undo()" id="undoB">UNDO</button>
+        <button class="redo" onclick="redo()" id="redoB">REDO</button>
+        <button class="random" onclick="random()" id="randomB">NEW GAME</button>
+    </section>
+    <br>
+    <label class="checkbox_label">
+        <input type="checkbox" id="wrappingB"> WRAPPING</checkbox>
+    </label>
+    <br>
+    <label class="checkbox_label">
+        <input type="checkbox" id="squareG"> SQUARE</checkbox>
+    </label>
+    <br>
+    <label class="walls_label">WALL %<br>
+        <select id="wall-choice">
+            <option value="20">20% walls</option>
+            <option value="30">30% walls</option>
+            <option value="40">40% walls</option>
+            <option value="60">60% walls</option>
+        </select>
+    </label>
+    <br>
+    <p></p>
+    
+    <!-- ********************* script ********************* -->
+
+    <script src="game.js"></script>
+    <script src="game_script.js"> </script>
+
+</body>
+
+</html>

@@ -1,0 +1,200 @@
+canvas {
+    background-image: url("png/space.png");
+    outline: 2px solid white;
+    background-size: cover;
+}
+
+.videoclass{
+    position:absolute;
+    opacity:0.9;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: fixed; 	
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-variant: small-caps;
+    text-align: center;
+    max-width: 1500px;
+    margin: auto auto; 
+    color: white;
+}
+
+a{
+    color:white;
+}
+
+h1{
+    text-decoration: underline white;
+    text-shadow: 1px 1px;
+}
+
+aside{text-align: right;}
+
+.centered {margin: 0 auto; width: 65%; text-align: center; margin-top: 2%; margin-bottom: 2%;}
+.left {width: 65%; text-align: left; margin-top: 2%; margin-bottom: 2%;}
+.right {width: 65%; text-align: right; margin-top: 2%; margin-bottom: 2%;}
+
+
+h2, .nl{
+    text-decoration: underline white;
+    text-transform: uppercase;
+    text-shadow: 1px 1px;
+}
+    
+.sliced {border-style: dashed; text-shadow: 1px 1px;}
+
+
+
+.restart{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-image:url("png/space_restart.png");
+    background-position: 50% 0%;
+    font-variant: small-caps;
+    padding: 30px 50px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color:white;
+}
+
+.solve{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-image:url("png/space_solve.png");
+    background-position: 20% 25%;
+    font-variant: small-caps;
+    padding: 30px 50px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color:white;
+}
+
+.undo{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-image:url("png/space_undo_redo.png");
+    background-position: 5% 47%;
+    padding: 30px 50px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color:white;
+}
+
+.redo{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-image:url("png/space_undo_redo.png");
+    background-position: 15% 55%;
+    padding: 30px 50px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color:white;
+}
+
+.random{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    background-image:url("png/space_new_game.png");
+    background-position: 48% 20%;
+    padding: 30px 50px;
+    font-size: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color:white;
+}
+
+pre{
+    font-size: 25px;
+    color:white;
+}
+
+.checkbox_label, .walls_label {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+    font-variant: small-caps;
+    color:white;
+}
+
+input[type=checkbox], select{
+    transform: scale(1.5);
+}
+
+.help{
+    font-size: 25px;
+    color:white;
+}
+
+ul{
+    font-size:20px;
+    list-style-type: none;
+    line-height: 1.5;
+}
+
+
+.rules{
+    font-size:25px;
+    font-weight:bold;
+    color:white;
+    outline: 2px solid white;
+    outline-offset: 7px;
+}
+
+
+
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+.popup .popuptext {
+    visibility: hidden;
+    width: 1200px;
+    background-image: url("png/space_black.png");
+    background-size: cover;
+    outline: 2px solid white;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    top: 200%;
+    left: 50%;
+    margin-left: -600px;
+}
+  
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -20px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+  
+.popup .show {
+    visibility: visible;
+    animation: fadeIn 0.5s;
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+  
